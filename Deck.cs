@@ -25,6 +25,17 @@ public class Deck {
                     .ToList();
     }
 
+    public void ShuffleFisherYates() {
+        Random r = new Random();
+        int n = Cards.Count;
+        for(int i = n - 1; i > 0; i--) {
+            int j = r.Next(0, i+1);
+            Card temp = Cards[i];
+            Cards[i] = Cards[j];
+            Cards[j] = temp;
+        }
+    }
+
     public void Sort() {
         Cards = Cards.OrderBy(s => s.Suit)
                     .ThenBy(c => c.Value)
