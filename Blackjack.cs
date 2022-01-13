@@ -32,7 +32,7 @@ public class Blackjack {
             bool inTurn = true;
             while(inTurn) {
 
-                Console.WriteLine($"Player {i+1} has {players[i].PlayerHandStringValue()}");
+                Console.WriteLine($"Player {i+1} has {players[i].ToString()}");
                 Console.WriteLine($"Player {i+1} total: {players[i].PlayerHandIntValue()}\n");
 
                 if(players[i].PlayerHandIntValue() == 21) {
@@ -75,13 +75,13 @@ public class Blackjack {
         }
 
         Console.WriteLine("The dealer reveals his second card");
-        Console.WriteLine($"The dealer has {dealer.PlayerHandStringValue()}");
+        Console.WriteLine($"The dealer has {dealer.ToString()}");
         Console.WriteLine($"The dealers total is {dealer.PlayerHandIntValue()}\n");
 
         while(dealer.PlayerHandIntValue() < 17) {
             dealer.Hand.AddRange(deck.DealCards(1));
             Console.WriteLine($"The dealer was dealt a {dealer.GetLatestCard().Value}");
-            Console.WriteLine($"The dealer has {dealer.PlayerHandStringValue()}");
+            Console.WriteLine($"The dealer has {dealer.ToString()}");
             Console.WriteLine($"The dealers total is {dealer.PlayerHandIntValue()}\n");
         }
 

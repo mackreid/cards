@@ -12,7 +12,7 @@ public class Player {
         return total;
     }
 
-    public string PlayerHandStringValue() {
+    public override string ToString() {
         return String.Join(" ", Hand.Select(c => c.Value));
     }
 
