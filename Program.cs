@@ -46,7 +46,7 @@ namespace Cards
         }
 
         static void PrintCardValues(List<Card> cards) {
-            cards.ForEach(c => Console.WriteLine(c.GetCardStringValue()));
+            cards.ForEach(c => Console.WriteLine(c.ToString()));
         }
     }
 }

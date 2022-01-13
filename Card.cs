@@ -13,7 +13,7 @@ public class Card {
         Value = value;
     }
 
-    public string GetCardStringValue() {
+    public override string ToString() {
         return $"{Value}({IntValue}) {Suit}";
     }
 }
